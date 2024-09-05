@@ -1,0 +1,28 @@
+<header class="header">
+    <a href="" class="logo">
+        Vema's Photography
+    </a>
+    <nav class="navbar">
+        <a href="">Home</a>
+        <a href="">Portfolio</a>
+        <a href="">Services</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+    <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-search" id="search-btn"></div>
+        <div class="fa fa-shopping-cart" id="cart-btn"></div>
+        <div class="fa fa-user" id="login-btn" [mat-menu-trigger-for]="menu"></div>
+    </div>
+    <form action="" class="search-form">
+       <input type="search" id="search-box" placeholder="Search Here....">
+        <label for="search-box" class="fa fa-search"></label>
+    </form>
+</header>
+<mat-menu #menu="matMenu">
+    <button class="menu-item" mat-menu-item><mat-icon>account_circle</mat-icon><span class="size" (click)="userSignUp()">Register</span></button>
+    <button class="menu-item" mat-menu-item><mat-icon>exit_to_app</mat-icon><span class="size" (click)="userLogIn()">Login</span></button>
+    <button class="menu-item" mat-menu-item><mat-icon>power_settings_news</mat-icon><span class="size">SignOut</span></button>
+</mat-menu>
+

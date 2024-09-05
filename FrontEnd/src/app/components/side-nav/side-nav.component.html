@@ -1,0 +1,12 @@
+<mat-drawer-container class="vema-container" autosize="">
+    <mat-drawer class="vema-sidenav" #drawer mode="side" opened>
+        <h3>vema navbar</h3>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="vema-sidenav-content">
+            <mat-icon type="button" style="font-size: 18px;height: 500px; width: 200px;color: #000;top: 300px;"
+            (click)="drawer.toggle()">menu</mat-icon>
+            <div class="pageContent"><router-outlet></router-outlet></div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
